@@ -15,6 +15,11 @@ class User extends Authenticatable
      *
      * @var array
      */
+    public function role()
+    {
+        return $this->role; // this looks for an admin column in your users table
+    }
+
     protected $fillable = [
         'name', 'email', 'password',
     ];
