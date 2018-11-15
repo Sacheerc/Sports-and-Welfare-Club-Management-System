@@ -77,7 +77,14 @@
         </nav>
 
         <div class="container-fluid">
-            @yield('content')
+            <div class="row">
+                <div class="col-md-2 bg-dark" style="padding: 5px">
+                    @yield('sidemenu')
+                </div>
+                <div class=" col-md-10">
+                    @yield('content')
+                </div>
+            </div>
         </div>
     </div>
 </body>

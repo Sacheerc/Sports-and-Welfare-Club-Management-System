@@ -16,7 +16,7 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-        if ( Auth::check() && Auth::user()->role()=="Admin" )
+        if ( Auth::check() && ((Auth::user()->role()=="Admin"||Auth::user()->role()=="President")||Auth::user()->role()=="VicePresident"||Auth::user()->role()=="Secretary"||Auth::user()->role()=="Treasurer"))
         {
             return $next($request);
         }

@@ -27,5 +27,5 @@
     </div>
 @endsection
 @section('content')
-    <h1>Admin Area</h1>
+    <h1>Vice President Area</h1>
 @endsection
