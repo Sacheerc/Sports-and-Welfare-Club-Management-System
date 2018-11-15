@@ -26,7 +26,7 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -76,9 +76,9 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <div class="container-fluid">
             @yield('content')
-        </main>
+        </div>
     </div>
 </body>
 </html>
