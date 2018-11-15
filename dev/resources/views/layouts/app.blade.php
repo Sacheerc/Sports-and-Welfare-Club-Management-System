@@ -27,7 +27,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/admin') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -81,7 +81,7 @@
                 <div class="col-md-2 bg-dark" style="padding: 5px">
                     @yield('sidemenu')
                 </div>
-                <div class=" col-md-10">
+                <div class=" col-md-10" style="background-color:darkslategrey">
                     @yield('content')
                 </div>
             </div>
