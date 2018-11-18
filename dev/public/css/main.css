@@ -1,3 +1,4 @@
+
 .menubox{
     width: 100%;
     padding:15px 5px 15px;
@@ -24,6 +25,11 @@
     display: block;
 }
 
+.menubox:hover a:link {
+    color: inherit;
+    text-decoration: none;
+}
+
 .menubox-content {
     display: none;
     position: relative;
@@ -35,5 +41,5 @@
     z-index: 100;
 }
 
-a:link { color: white; }
+
 

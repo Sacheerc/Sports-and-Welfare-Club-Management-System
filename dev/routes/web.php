@@ -19,6 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/makedeaddonation','DonationController@index');
+Route::post('/validatemember','DonationController@check');
+Route::post('/storedonation','DonationController@store');
+
 Route::get('/registration', 'MembersController@index');
 Route::post('/store', 'MembersController@store');
 
