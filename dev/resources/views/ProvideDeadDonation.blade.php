@@ -21,7 +21,6 @@
                 amount.value=0;
             }
         }
-
     </script>
 
 
@@ -39,6 +38,11 @@
                 <div class="col-md-3 text-center">
                     <button type="submit" class="btn btn-danger" style="width: 100px">Check</button>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-9  text-danger">@isset($error){{$error}}@endisset</div>
             </div>
         </form>
     </div>
@@ -92,10 +96,14 @@
 
             <div class="row">
                 <div class="col-md-3 text-center">
-                    <button type="submit" class="btn btn-success" style="width: 100px">Proceed</button>
+                    <button type="submit" class="btn btn-success" name="deadsubmit" style="width: 100px">Proceed</button>
                 </div>
             </div>
-
+            @isset($message)
+                <script>
+                    window.alert("Added Success..!");
+                </script>
+            @endisset
 
         </form>
     </div>

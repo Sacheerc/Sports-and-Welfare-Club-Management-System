@@ -32,8 +32,9 @@ class DonationController extends Controller
     public function check(Request $request){
         $request->all();
         $epfnum=Members::find($request)->first();
+        $error="Entered Number Doesn't match with our database..!";
         if($epfnum===null){
-            dd("No");
+            return view('ProvideDeadDonation',compact('error'));
         }
         else {
             $epfnum=$epfnum->epfNumber;
@@ -50,8 +51,9 @@ class DonationController extends Controller
     public function store(Request $request)
     {
         Donation::create($request->all());
+        $message="Added Success..!";
 //        return redirect()->back();
-        return view('ProvideDeadDonation');
+        return view('ProvideDeadDonation',compact('message'));
     }
 
     /**
