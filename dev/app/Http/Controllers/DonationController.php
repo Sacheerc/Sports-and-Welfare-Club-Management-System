@@ -64,7 +64,8 @@ class DonationController extends Controller
      */
     public function show(Donation $donation)
     {
-        //
+        $donations=$donation->all();
+        return view('manageDeadDonations',compact('donations'));
     }
 
     /**

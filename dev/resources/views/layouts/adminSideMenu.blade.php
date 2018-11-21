@@ -14,7 +14,7 @@
     <a href="/makedeaddonation"><div class="menubox-content">
             <h5>Make Donation</h5>
         </div></a>
-    <a href="#"><div class="menubox-content">
+    <a href="/managedeaddonation"><div class="menubox-content">
             <h5>Manage Donations</h5>
         </div>
     </a>
