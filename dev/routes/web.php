@@ -20,6 +20,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/makedeaddonation','DonationController@index');
+Route::get('/editdeaddonation/{donation}','DonationController@edit');
+Route::patch('/updatedeaddonation/{donation}','DonationController@update');
 Route::get('/removedeaddonation/{donation}','DonationController@destroy');
 Route::get('/managedeaddonation','DonationController@show');
 Route::post('/validatemember','DonationController@check');

@@ -76,7 +76,7 @@ class DonationController extends Controller
      */
     public function edit(Donation $donation)
     {
-        //
+        return view('editDeadDonation',compact('donation'));
     }
 
     /**
@@ -88,7 +88,9 @@ class DonationController extends Controller
      */
     public function update(Request $request, Donation $donation)
     {
-        //
+//        dd($request->all());
+        $donation->fill($request->all())->save();
+        return redirect()->back();
     }
 
     /**

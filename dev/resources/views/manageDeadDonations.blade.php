@@ -23,7 +23,7 @@
                     <td>{{$donation->amount}} </td>
                     <td>{{$donation->chequenum}} </td>
                     <td style='width: 250px'>
-                        <button  class='btn btn-primary'>Edit</button>
+                        <a href="/editdeaddonation/{{$donation->epfnum}}" class='btn btn-primary'>Edit</a>
                         <a href="/removedeaddonation/{{$donation->epfnum}}"  class='btn btn-danger'>Delete</a>
                     </td>
                 </tr>
