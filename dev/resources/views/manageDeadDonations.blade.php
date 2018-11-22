@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="container text-light">
+    <div class="container text-light text-center">
         <br>
         <table>
             <tr>
@@ -24,7 +24,7 @@
                     <td>{{$donation->chequenum}} </td>
                     <td style='width: 250px'>
                         <button  class='btn btn-primary'>Edit</button>
-                        <button  class='btn btn-danger'>Delete</button>
+                        <a href="/removedeaddonation/{{$donation->epfnum}}"  class='btn btn-danger'>Delete</a>
                     </td>
                 </tr>
                 <br>

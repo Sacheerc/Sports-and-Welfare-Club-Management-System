@@ -99,6 +99,7 @@ class DonationController extends Controller
      */
     public function destroy(Donation $donation)
     {
-        //
+        $donation->delete();
+        return redirect()->back();
     }
 }
