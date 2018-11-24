@@ -78,13 +78,13 @@
                         </div>
                         <br>
                         <div class=' row'>
-                            <div class="col-md-6  " style="color: lawngreen">
+                            <div class="col-md-4  " style="color: lawngreen">
 
                             </div>
-                            <div class=" col-md-2 ">
+                            <div class=" col-md-3 ">
                                 <button  type="submit" class="form-control btn btn-success" value="submit" name="submit">Submit</button>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <button  type="reset" class="form-control btn btn-danger" value="cancel">Cancel</button>
                             </div>
                         </div>
