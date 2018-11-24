@@ -20,7 +20,18 @@
     </a>
 </div>
 <div class="menubox justify-content-center">
-    <h4>Home</h4>
+    <h4>Events</h4>
+    <a href="createEventForm">
+        <div class="menubox-content">
+            <h5>Events</h5>
+        </div>
+    </a>
+    <a href="createEventForm">
+        <div class="menubox-content">
+            <h5>Create Event</h5>
+        </div>
+    </a>
+
 </div>
 <div class="menubox justify-content-center">
     <h4>Home</h4>

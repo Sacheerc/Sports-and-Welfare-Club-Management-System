@@ -33,6 +33,8 @@ Route::post('/store', 'MembersController@store');
 Route::get('/payment', 'PaymentController@index');
 Route::post('/makepayment', 'PaymentController@charge');
 
+Route::get('/createEventForm','EventController@index');
+Route::post('/createEvent','EventController@create');
 
 
 Route::get('/admin', ['middleware' => ['auth', 'Admin'], 'uses'=>'AdminController@index']);
