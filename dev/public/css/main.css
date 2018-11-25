@@ -2,7 +2,7 @@
 .menubox{
     width: 100%;
     padding:15px 5px 15px;
-    background-image: linear-gradient( rgb(128,0,0),rgb(230,0,0),rgba(128,0,0,1));
+    background-color: maroon;
     color: white;
     border-radius: 10px;
     margin-top: 5px;
@@ -12,13 +12,13 @@
 }
 .menubox:hover{
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
-    background-image: linear-gradient( rgb(102,0,0),rgb(255,0,0),rgba(102,0,0,1));
+    background-color: maroon;
 }
 
 
 .menubox-content:hover{
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
-    background-image: linear-gradient( rgb(255,0,0),rgb(102,0,0),rgba(255,0,0,1));
+    background-color:slategray;
 }
 
 .menubox:hover .menubox-content{
@@ -33,7 +33,7 @@
 .menubox-content {
     display: none;
     position: relative;
-    background-image: linear-gradient( rgb(102,0,0),rgb(255,0,0),rgba(102,0,0,1));
+    background-color:#16181b;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     border-radius: 5px;
