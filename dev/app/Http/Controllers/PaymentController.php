@@ -22,6 +22,7 @@ class PaymentController extends Controller
 
     public function charge(Request $request)
     {
+//        dd($request->amount*100);
         try {
             Stripe::setApiKey(env('STRIPE_SECRET_KEY'));
 
@@ -32,13 +33,22 @@ class PaymentController extends Controller
 
             $charge = Charge::create(array(
                 'customer' => $customer->id,
-                'amount' => 1999,
+                'amount' => $request->amount*100,
                 'currency' => 'usd'
             ));
 
-            return 'Charge successful, you get the course!';
+            Payment::create(array(
+                'firstName'=>$request->firstName,
+                'lastName'=>$request->lastName,
+                'email'=>$request->email,
+                'contact'=>$request->contact,
+                'amount'=>$request->amount,
+            ));
+
+            return view('payment.paymentsuccess');
+
         } catch (\Exception $ex) {
-            return $ex->getMessage();
+            return view('layouts.error');
         }
     }
 
@@ -47,6 +57,22 @@ class PaymentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function details()
+    {
+        return view('payment.paymentdetails');
+    }
+
+    public function proceed(Request $request)
+    {
+        $firstName=$request->firstName;
+        $lastName=$request->lastName;
+        $email=$request->email;
+        $contact=$request->contact;
+        $amount=($request->amount);
+        return view('payment.proceedpayment',compact('firstName','lastName','email','contact','amount'));
+    }
+
     public function create()
     {
         //
