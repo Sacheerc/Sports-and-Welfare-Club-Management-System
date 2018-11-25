@@ -44,6 +44,9 @@ Route::post('/store', 'MembersController@store');
 
 Route::get('/payment', 'PaymentController@index');
 Route::get('/managepayment', 'PaymentController@show');
+Route::get('/removepayment/{payment}','PaymentController@destroy');
+Route::get('/editpayment/{payment}','PaymentController@edit');
+Route::patch('/updatepayment/{payment}','PaymentController@update');
 Route::get('/paymentdetails','PaymentController@details');
 Route::post('/proceed','PaymentController@proceed');
 Route::post('/makepayment', 'PaymentController@charge');
