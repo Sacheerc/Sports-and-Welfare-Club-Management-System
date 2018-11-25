@@ -97,7 +97,8 @@ class PaymentController extends Controller
      */
     public function show(Payment $payment)
     {
-        //
+        $payments=$payment->all();
+        return view('payment.managepayment',compact('payments'));
     }
 
     /**
