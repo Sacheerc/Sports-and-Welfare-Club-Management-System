@@ -25,7 +25,7 @@
 
 
     <br><br>
-    <div class="container-fluid col-md-8 col-md-offset-1 text-light border" style="border-radius: 10px;padding:30px">
+    <div class="form container-fluid col-md-8 col-md-offset-1 text-light border">
         <form action="/validatemember" method="POST" >
             @csrf
             <div class="row">
@@ -48,7 +48,7 @@
     </div>
     <br>
 
-    <div class="container-fluid col-md-8 col-md-offset-1 text-light border" style="border-radius: 10px;padding:30px">
+    <div class="form container-fluid col-md-8 col-md-offset-1 text-light border">
         <form action="/storedonation" method="POST" >
             @csrf
 
