@@ -11,13 +11,25 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/404', function () {
+    return view('layouts.error');
+});
+
+Route::get('/paymentsuccess', function () {
+    return view('payment.paymentsuccess');
+});
+
+Route::get('/', function () {
+    return view('payment.mainindex');
+});
 
 Route::get('/makedeaddonation','DonationController@index');
 Route::get('/editdeaddonation/{donation}','DonationController@edit');
@@ -31,6 +43,8 @@ Route::get('/registration', 'MembersController@index');
 Route::post('/store', 'MembersController@store');
 
 Route::get('/payment', 'PaymentController@index');
+Route::get('/paymentdetails','PaymentController@details');
+Route::post('/proceed','PaymentController@proceed');
 Route::post('/makepayment', 'PaymentController@charge');
 
 Route::get('/createEventForm','EventController@index');
