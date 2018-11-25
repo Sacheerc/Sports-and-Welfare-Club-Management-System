@@ -23,7 +23,7 @@
 
 
 </head>
-<body>
+<body id="background">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
             <div class="container-fluid">
@@ -78,10 +78,10 @@
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-2 bg-dark" style="padding: 5px">
+                <div class="col-md-2 " style="padding: 5px;background: rgba(0,0,0,0.8)">
                     @yield('sidemenu')
                 </div>
-                <div class=" col-md-10" style="min-height:650px;background-color:darkslategrey">
+                <div class=" col-md-10" style="min-height:552px;background: rgba(0,0,0,0.3)">
                     @yield('content')
                 </div>
             </div>
