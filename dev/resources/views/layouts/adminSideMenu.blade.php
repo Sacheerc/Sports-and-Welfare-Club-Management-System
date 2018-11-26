@@ -45,5 +45,15 @@
     </a>
 </div>
 <div class="menubox justify-content-center">
-    <h4>Home</h4>
+    <h4>Loans</h4>
+    <a href="/offerloans">
+        <div class="menubox-content">
+            <h5>Offer Loans</h5>
+        </div>
+    </a>
+    <a href="/managepayment">
+        <div class="menubox-content">
+            <h5>Manage Loans</h5>
+        </div>
+    </a>
 </div>

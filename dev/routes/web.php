@@ -54,6 +54,10 @@ Route::post('/makepayment', 'PaymentController@charge');
 Route::get('/createEventForm','EventController@index');
 Route::post('/createEvent','EventController@create');
 
+Route::get('/offerloans','LoanController@index');
+Route::post('/saveloans','LoanController@store');
+
+
 
 Route::get('/admin', ['middleware' => ['auth', 'Admin'], 'uses'=>'AdminController@index']);
 
