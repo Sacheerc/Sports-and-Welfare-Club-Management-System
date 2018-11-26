@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f0f142f-ad6c-43e2-b2a6-bf079aae5dc5" name="Default Changelist" comment="" />
+    <list default="true" id="0f0f142f-ad6c-43e2-b2a6-bf079aae5dc5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/app/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/app/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/app/EventExpenses.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/app/EventExpenses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/app/EventItems.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/app/EventItems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/app/Http/Controllers/EventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/database/migrations/2018_11_23_033910_create_events_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/database/migrations/2018_11_23_033910_create_events_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/database/migrations/2018_11_23_115624_create_event_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/database/migrations/2018_11_23_115624_create_event_items_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/database/migrations/2018_11_23_115707_create_event_expenses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/database/migrations/2018_11_23_115707_create_event_expenses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/resources/views/events/createEvent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/resources/views/events/createEvent.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/resources/views/events/eventHome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/resources/views/events/eventHome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/resources/views/layouts/adminSideMenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/resources/views/layouts/adminSideMenu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/dev/routes/web.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,14 +59,24 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1275367771">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.76" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/app/Http/Controllers/DonationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="52" column="42" lean-forward="true" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+            <state relative-caret-position="833">
+              <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -75,7 +98,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/app/Http/Controllers/EventController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-85">
+            <state relative-caret-position="85">
               <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
             </state>
           </provider>
@@ -84,8 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/database/migrations/2014_10_12_000000_create_users_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+            <state relative-caret-position="340">
+              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
               <folding>
                 <element signature="e#7#45#0#PHP" expanded="true" />
               </folding>
@@ -96,17 +119,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dev/resources/views/events/createEvent.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
+            <state relative-caret-position="528">
               <caret line="86" column="48" selection-start-line="86" selection-start-column="48" selection-end-line="86" selection-end-column="48" />
-              <folding>
-                <element signature="e#270#297#0#HTML" expanded="true" />
-                <element signature="e#349#459#0#HTML" expanded="true" />
-                <element signature="e#671#698#0#HTML" expanded="true" />
-                <element signature="e#750#860#0#HTML" expanded="true" />
-                <element signature="e#965#985#0#HTML" expanded="true" />
-                <element signature="e#4306#4333#0#HTML" expanded="true" />
-                <element signature="e#4385#4495#0#HTML" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -116,12 +130,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
               <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="e#270#297#0#HTML" expanded="true" />
-                <element signature="e#349#459#0#HTML" expanded="true" />
-                <element signature="e#4306#4333#0#HTML" expanded="true" />
-                <element signature="e#4385#4495#0#HTML" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -129,8 +137,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/resources/views/layouts/adminSideMenu.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+            <state relative-caret-position="493">
+              <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -139,7 +147,7 @@
         <entry file="file://$PROJECT_DIR$/dev/app/Event.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -156,7 +164,7 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/dev" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -272,7 +280,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -379,13 +386,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../policeSystem" />
+    <property name="last_opened_file_path" value="$USER_HOME$/cmyexp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -413,17 +422,18 @@
       <workItem from="1542447395856" duration="540000" />
       <workItem from="1542880166282" duration="4857000" />
       <workItem from="1542973597894" duration="11346000" />
+      <workItem from="1543039040752" duration="806000" />
+      <workItem from="1543135743919" duration="30000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17808000" />
+    <option name="totallyTimeSpent" value="18644000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25416037" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26172465" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -534,12 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
           <caret line="130" column="22" lean-forward="true" selection-start-line="120" selection-start-column="16" selection-end-line="130" selection-end-column="22" />
-          <folding>
-            <element signature="e#228#255#0#HTML" expanded="true" />
-            <element signature="e#300#410#0#HTML" expanded="true" />
-            <element signature="e#501#521#0#HTML" expanded="true" />
-            <element signature="e#4718#4742#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -593,39 +597,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev/app/Http/Controllers/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dev/app/Http/Controllers/DonationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="52" column="42" lean-forward="true" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+        <state relative-caret-position="833">
+          <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev/app/Event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dev/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-          <folding>
-            <element signature="e#7#45#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/dev/app/Http/Controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/database/migrations/2018_11_23_033910_create_events_table.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -636,15 +616,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/app/Http/Controllers/EventController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
+        <state relative-caret-position="85">
           <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev/resources/views/layouts/adminSideMenu.blade.php">
+    <entry file="file://$PROJECT_DIR$/dev/database/migrations/2014_10_12_000000_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+        <state relative-caret-position="340">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+          <folding>
+            <element signature="e#7#45#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -652,28 +635,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#270#297#0#HTML" expanded="true" />
-            <element signature="e#349#459#0#HTML" expanded="true" />
-            <element signature="e#4306#4333#0#HTML" expanded="true" />
-            <element signature="e#4385#4495#0#HTML" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/resources/views/layouts/adminSideMenu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/app/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/resources/views/events/createEvent.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
+        <state relative-caret-position="528">
           <caret line="86" column="48" selection-start-line="86" selection-start-column="48" selection-end-line="86" selection-end-column="48" />
-          <folding>
-            <element signature="e#270#297#0#HTML" expanded="true" />
-            <element signature="e#349#459#0#HTML" expanded="true" />
-            <element signature="e#671#698#0#HTML" expanded="true" />
-            <element signature="e#750#860#0#HTML" expanded="true" />
-            <element signature="e#965#985#0#HTML" expanded="true" />
-            <element signature="e#4306#4333#0#HTML" expanded="true" />
-            <element signature="e#4385#4495#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
