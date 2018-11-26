@@ -97,7 +97,8 @@ class PaymentController extends Controller
      */
     public function show(Payment $payment)
     {
-        //
+        $payments=$payment->all();
+        return view('payment.managepayment',compact('payments'));
     }
 
     /**
@@ -108,7 +109,7 @@ class PaymentController extends Controller
      */
     public function edit(Payment $payment)
     {
-        //
+        return view('payment.editpayment',compact('payment'));
     }
 
     /**
@@ -120,7 +121,8 @@ class PaymentController extends Controller
      */
     public function update(Request $request, Payment $payment)
     {
-        //
+        $payment->fill($request->all())->save();
+        return redirect()->back();
     }
 
     /**
@@ -131,6 +133,7 @@ class PaymentController extends Controller
      */
     public function destroy(Payment $payment)
     {
-        //
+        $payment->delete();
+        return redirect()->back();
     }
 }
