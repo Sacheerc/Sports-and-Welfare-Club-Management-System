@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="container text-light text-center">
+    <div class="container text-light text-center col-md-8 " style="min-height: 700px">
         <br>
         <table>
             <tr>
@@ -27,7 +27,6 @@
                         <a href="/removedeaddonation/{{$donation->epfnum}}"  class='btn btn-danger'>Delete</a>
                     </td>
                 </tr>
-                <br>
             @endforeach
 
         </table>

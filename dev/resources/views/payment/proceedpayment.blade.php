@@ -1,4 +1,24 @@
 @extends('layouts.appindex')
+<div id="paymentform">
+    <form action="/makepayment" method="POST">
+        {{ csrf_field() }}
+        <input name="firstName" type="hidden" value="{{$firstName}}">
+        <input name="lastName" type="hidden" value="{{$lastName}}">
+        <input name="email" type="hidden" value="{{$email}}">
+        <input name="contact" type="hidden" value="{{$contact}}">
+        <input name="amount" type="hidden" value="{{$amount}}">
+        <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="{{ env('STRIPE_PUB_KEY') }}"
+                data-amount="{{$amount*100}}"
+                data-name="Stripe.com"
+                data-description="Example charge"
+                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                data-locale="auto"
+                data-zip-code="true">
+        </script>
+    </form>
+</div>
 
 @section('content')
     <div id="background">
@@ -10,14 +30,12 @@
         <div class="container-fluid row">
             <div class="col-md-3"></div>
             <div class="col-md-6" style="background: rgba(255,255,255,0.8);padding:10px 30px 30px;border-radius: 20px">
-                <form action="/proceed" method="post">
-                    @csrf
                     <div class="row">
                         <div class="col-md-3">
                             First Name:
                         </div>
-                        <div class="col-md-6">
-                            <input id="firstName" required class="form-control" type="text" name="firstName" placeholder="First Name" >
+                        <div id="previewdata" class="col-md-6">
+                            {{$firstName}}
                         </div>
                     </div>
                     <br>
@@ -26,8 +44,8 @@
                         <div class="col-md-3">
                             Last Name:
                         </div>
-                        <div class="col-md-6">
-                            <input id="lastName" required class="form-control" type="text" name="lastName" placeholder="Last Name" >
+                        <div id="previewdata" class="col-md-6">
+                            {{$lastName}}
                         </div>
                     </div>
                     <br>
@@ -35,8 +53,8 @@
                         <div class="col-md-3">
                             Email Address:
                         </div>
-                        <div class="col-md-6">
-                            <input id="email" required class="form-control" type="email"  name="email"  placeholder="Email Address" >
+                        <div id="previewdata" class="col-md-6">
+                            {{$email}}
                         </div>
                     </div>
                     <br>
@@ -44,8 +62,8 @@
                         <div class="col-md-3">
                             Contact:
                         </div>
-                        <div class="col-md-6">
-                            <input id="contact" required class="form-control" type="text"  name="contact"  placeholder="Contact Number" >
+                        <div id="previewdata" class="col-md-6">
+                            {{$contact}}
                         </div>
                     </div>
                     <br>
@@ -53,21 +71,21 @@
                         <div class="col-md-3">
                             Amount in USD:
                         </div>
-                        <div class="col-md-6">
-                            <input id="amount" required class="form-control" type="number"  name="amount"  placeholder="Amount" >
+                        <div id="previewdata" class="col-md-6">
+                            {{$amount}}
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-md-3"></div>
                         <div class="col-md-6">
-                            <button id="indexbtn" class="btn btn-primary" type="submit" name="update">Checkout</button>
+
                         </div>
                     </div>
-                </form>
             </div>
         </div>
 
     </div>
+
 
 @endsection

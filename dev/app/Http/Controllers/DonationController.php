@@ -50,6 +50,12 @@ class DonationController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request,[
+            'efpnum'=>'required|max:8',
+            'reason'=>'required',
+            'amount'=>'required',
+            'chequenum'=>'required'
+        ]);
         Donation::create($request->all());
         $message="Added Success..!";
 //        return redirect()->back();

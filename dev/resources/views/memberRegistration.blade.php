@@ -6,10 +6,10 @@
 
 @section('content')
     <br>
-    <div class="container-fluid col-md-10 col-md-offset-1">
+    <div class="container-fluid col-md-10 col-md-offset-1 ">
 
-        <div class=" bg-dark text-light" style="border-radius: 10px">
-            <h4 class="text-light border"  style="background-color:rgb(230,0,0);padding: 10px;border-top-right-radius: 10px;border-top-left-radius: 10px">Member Registration</h4>
+        <div class=" form text-light border">
+            <h4 class="text-light "  style="padding: 10px;border-top-right-radius: 10px;border-top-left-radius: 10px">Member Registration</h4>
             <br>
             <form action="/store" method="POST" style="padding:20px">
                 @csrf
@@ -131,7 +131,6 @@
                 </div>
             </form>
             <br>
-            <h4 class="boder" style="height:40px;margin-bottom:5px;background-color:rgb(230,0,0);-webkit-border-bottom-right-radius:10px;-webkit-border-bottom-left-radius:10px;"><br></h4>
         </div>
 
 

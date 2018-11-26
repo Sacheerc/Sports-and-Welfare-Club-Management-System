@@ -25,7 +25,7 @@
 
 
     <br><br>
-    <div class="container-fluid col-md-8 col-md-offset-1 text-light border" style="border-radius: 10px;padding:30px">
+    <div class="form container-fluid col-md-8 col-md-offset-1 text-light border">
         <form action="/validatemember" method="POST" >
             @csrf
             <div class="row">
@@ -48,7 +48,7 @@
     </div>
     <br>
 
-    <div class="container-fluid col-md-8 col-md-offset-1 text-light border" style="border-radius: 10px;padding:30px">
+    <div class="form container-fluid col-md-8 col-md-offset-1 text-light border">
         <form action="/storedonation" method="POST" >
             @csrf
 
@@ -99,11 +99,21 @@
                     <button type="submit" class="btn btn-success" name="deadsubmit" style="width: 100px">Proceed</button>
                 </div>
             </div>
-            @isset($message)
-                <script>
-                    window.alert("Added Success..!");
-                </script>
-            @endisset
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-9 text-center">
+                    @if ($errors->any())
+                        @foreach ($errors->all() as $error)
+                            <div class="text-danger">{{$error}}</div>
+                            <br>
+                        @endforeach
+                    @endif
+                </div>
+            </div>
+
 
         </form>
     </div>
