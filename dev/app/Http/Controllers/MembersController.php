@@ -35,17 +35,18 @@ class MembersController extends Controller
      */
     public function store(Request $request)
     {
-//        return Members::create([
-//            'epfNumber'=> request('epfNumber'),
-//            'firstName' => request('firstName'),
-//            'lastName'=> request('lastName'),
-//            'gender'=> request('gender'),
-//            'department'=> request('department'),
-//            'email'=> request('email'),
-//            'contact'=> request('contact'),
-//            'address'=> request('address'),
-//        ]);
-//
+        $this->validate($request,[
+            'epfNumber'=>['required','unique:members'],
+            'firstName'=>['required', 'string', 'max:255'],
+            'lastName'=>['required', 'string', 'max:255'],
+            'gender'=>'required',
+            'department'=>'required',
+            'email'=>['required', 'string', 'email', 'max:255', 'unique:members'],
+            'contact'=>['required','max:12', 'unique:members'],
+            'address'=>['required', 'string','max:255'],
+            'terms'=>'required'
+        ]);
+
         Members::create($request->all());
         return redirect()->back();
     }
