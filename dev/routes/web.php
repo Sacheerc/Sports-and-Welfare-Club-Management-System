@@ -63,6 +63,8 @@ Route::get('/offerloans','LoanController@index');
 Route::get('/manageloans','LoanController@show');
 Route::get('/removeloans/{loan}','LoanController@destroy');
 Route::post('/saveloans','LoanController@store');
+Route::post('/filterloans','LoanController@filter');
+Route::get('/claimloan/{loan}','LoanController@claim');
 Route::get('/editloans/{loan}','LoanController@edit');
 Route::patch('/updateloan/{loan}','LoanController@update');
 

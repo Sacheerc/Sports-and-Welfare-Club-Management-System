@@ -103,8 +103,8 @@
                                 </form>
                             </td>
                         </tr>
-                    </tbody>
                     @endforeach
+                    </tbody>
                 </table>
 
                 {{--<div class="text-light border" style="border-radius: 10px">--}}

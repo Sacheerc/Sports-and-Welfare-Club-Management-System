@@ -90,6 +90,27 @@ class LoanController extends Controller
         return redirect()->back();
     }
 
+    public function claim(Loan $loan)
+    {
+        $loan->restamount-=1650;
+        $loan->timeleft-=1;
+        if($loan->restamount<=0){
+            $loan->status="closed";
+        };
+        $loan->save();
+        $loans=$loan->all();
+        return view('loans.manageloans',compact('loans'));
+    }
+
+
+    public function filter(Request $request)
+    {
+
+        $loans=Loan::where('epfnum','=',$request->epfnum)->get();
+        return view('loans.manageloans',compact('loans'));
+
+    }
+
     /**
      * Remove the specified resource from storage.
      *
