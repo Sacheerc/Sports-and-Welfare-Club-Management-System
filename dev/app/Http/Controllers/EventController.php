@@ -36,23 +36,30 @@ class EventController extends Controller
         $event->startTime=$request->startTime;
         $event->endTime=$request->endTime;
         $event->details=$request->details;
+
+
+        $memberslist = db::table('members')->get();
+
+        $data = array('heading'=>"Ramada Hotel",'eventName'=>"Event : ".$request->eventName,
+            'eventDate'=>"Date : ".$request->eventDate,'venue'=>"Venue : ".$request->venue,
+            'startTime'=>"Start Time : ".$request->startTime,'endTime'=>"End Time : ".$request->endTime,
+            'details'=>"Details : ".$request->details,
+            'thank'=>"Join with the event..Thank You!"
+        );
+
+        foreach ($memberslist as $member){
+            $email=$member->email;
+
+            Mail::send(['text'=>'events.createEventEmail'], $data, function($message) use ($email) {
+                $message->to($email)->subject
+                ('Event Notice');
+                $message->from('ramadasystem@gmail.com','Ramada Hotel');
+            });
+
+        }
         $event->creator=$request=Auth::User()->name;
 
         $event->save();
-
-        $email = db::table('members')->where('eventDate','<',$today)->get();
-
-        $data = array('heading'=>"Welcome to Crime Reporting System",'fullName'=>"Full Name: ".$request->fullName,'name'=>
-            "Name with initials: ".$request->name,'nic'=>"NIC: ".$request->nic,
-            'msg'=>"Complete your Registration at $request->policeStation by showing NIC",'thank'=>"Thank You!"
-        );
-
-
-        Mail::send(['text'=>'mail'], $data, function($message) use ($em) {
-            $message->to($em)->subject
-            ('SL Police System Citizen Registration');
-            $message->from('slpolicesystem@gmail.com','SL Police');
-        });
         return redirect("/viewEvents");
     }
 
@@ -113,7 +120,27 @@ class EventController extends Controller
 
     public function deleteEvent(Request $request){
         $res=db::table('events')->where('eventId',$request->eventId)->delete();
-        if($res){
+        if($res ){
+            if($request->deleteMessage!=null){
+                $memberslist = db::table('members')->get();
+
+                $data = array('heading'=>"Ramada Hotel",'msg'=>"Event cancelled!",'usermsg'=>$request->deleteMessage,'eventName'=>"Event : ".$request->eventName,
+                    'eventDate'=>"Date : ".$request->eventDate,'venue'=>"Venue : ".$request->venue,
+                    'thank'=>"Sorry for the inconvinence!..Thank You!"
+                );
+
+                foreach ($memberslist as $member){
+                    $email=$member->email;
+
+                    Mail::send(['text'=>'events.deleteEventEmail'], $data, function($message) use ($email) {
+                        $message->to($email)->subject
+                        ('Event Notice');
+                        $message->from('ramadasystem@gmail.com','Ramada Hotel');
+                    });
+
+                }
+            }
+
             return redirect("/viewEvents");
         }
 
@@ -143,6 +170,26 @@ class EventController extends Controller
         ->where('eventId',$request->eventId)
         ->update(['eventName'=>$request->eventName,'eventDate'=>$request->eventDate,'venue'=>$request->venue,
             'startTime'=>$request->startTime,'endTime'=>$request->endTime,'details'=>$request->details]);
+
+        $memberslist = db::table('members')->get();
+
+        $data = array('heading'=>"Ramada Hotel",'updateMsg'=>"Event updated.Please check this out!",'eventName'=>"Event : ".$request->eventName,
+            'eventDate'=>"Date : ".$request->eventDate,'venue'=>"Venue : ".$request->venue,
+            'startTime'=>"Start Time : ".$request->startTime,'endTime'=>"End Time : ".$request->endTime,
+            'details'=>"Details : ".$request->details,
+            'thank'=>"Join with the event..Thank You!"
+        );
+
+        foreach ($memberslist as $member){
+            $email=$member->email;
+
+            Mail::send(['text'=>'events.updateEventEmail'], $data, function($message) use ($email) {
+                $message->to($email)->subject
+                ('Event Notice');
+                $message->from('ramadasystem@gmail.com','Ramada Hotel');
+            });
+
+        }
         return redirect("/viewEvents");
 
     }
