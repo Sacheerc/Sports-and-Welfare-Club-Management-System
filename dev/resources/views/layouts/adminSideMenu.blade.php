@@ -51,7 +51,7 @@
             <h5>Offer Loans</h5>
         </div>
     </a>
-    <a href="/managepayment">
+    <a href="/manageloans">
         <div class="menubox-content">
             <h5>Manage Loans</h5>
         </div>

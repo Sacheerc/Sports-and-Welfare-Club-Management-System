@@ -55,6 +55,8 @@ Route::get('/createEventForm','EventController@index');
 Route::post('/createEvent','EventController@create');
 
 Route::get('/offerloans','LoanController@index');
+Route::get('/manageloans','LoanController@show');
+Route::get('/removeloans/{loan}','LoanController@destroy');
 Route::post('/saveloans','LoanController@store');
 
 

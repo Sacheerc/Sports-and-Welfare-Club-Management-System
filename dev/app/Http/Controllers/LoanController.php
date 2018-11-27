@@ -62,7 +62,8 @@ class LoanController extends Controller
      */
     public function show(Loan $loan)
     {
-        //
+        $loans=$loan->all();
+        return view('loans.manageloans',compact('loans'));
     }
 
     /**
@@ -96,6 +97,7 @@ class LoanController extends Controller
      */
     public function destroy(Loan $loan)
     {
-        //
+        $loan->delete();
+        return redirect()->back();
     }
 }
