@@ -51,13 +51,13 @@ Route::get('/paymentdetails','PaymentController@details');
 Route::post('/proceed','PaymentController@proceed');
 Route::post('/makepayment', 'PaymentController@charge');
 
-Route::get('/createEventForm','EventController@index')->middleware('auth');
-Route::get('/viewEvents','EventController@viewEvents')->middleware('auth');
-Route::post('/createEvent','EventController@create')->middleware('auth');
-Route::get('/viewEvent','EventController@viewEvent')->middleware('auth');
-Route::get('/updateEventView','EventController@updateEventView')->middleware('auth');
-Route::post('/updateEvent','EventController@updateEvent')->middleware('auth');
-Route::post('/deleteEvent','EventController@deleteEvent')->middleware('auth');
+Route::get('/createEventForm','EventController@index');
+Route::get('/viewEvents','EventController@viewEvents');
+Route::post('/createEvent','EventController@create');
+Route::get('/viewEvent','EventController@viewEvent');
+Route::get('/updateEventView','EventController@updateEventView');
+Route::post('/updateEvent','EventController@updateEvent');
+Route::post('/deleteEvent','EventController@deleteEvent');
 
 Route::get('/offerloans','LoanController@index');
 Route::get('/manageloans','LoanController@show');
