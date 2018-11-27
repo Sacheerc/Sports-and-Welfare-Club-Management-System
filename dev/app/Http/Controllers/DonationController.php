@@ -65,7 +65,6 @@ class DonationController extends Controller
             'type' => "Expense",
         ]);
         $message="Added Success..!";
-//        return redirect()->back();
         return view('ProvideDeadDonation',compact('message'));
     }
 
@@ -101,7 +100,6 @@ class DonationController extends Controller
      */
     public function update(Request $request, Donation $donation)
     {
-//        dd($request->all());
         $donation->fill($request->all())->save();
         return redirect()->back();
     }
