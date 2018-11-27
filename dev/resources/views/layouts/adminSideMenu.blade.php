@@ -43,6 +43,11 @@
             <h5>Manage</h5>
         </div>
     </a>
+    <a href="/addExpensesFormView">
+        <div class="menubox-content">
+            <h5>Add Expenses</h5>
+        </div>
+    </a>
 </div>
 <div class="menubox justify-content-center">
     <h4>Loans</h4>

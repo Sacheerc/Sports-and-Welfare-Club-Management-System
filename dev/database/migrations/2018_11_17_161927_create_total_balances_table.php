@@ -15,6 +15,10 @@ class CreateTotalBalancesTable extends Migration
     {
         Schema::create('total_balances', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('record');
+            $table->integer('totalIncome');
+            $table->integer('totalOutcome');
+            $table->integer('totalBalance');
             $table->timestamps();
         });
     }
