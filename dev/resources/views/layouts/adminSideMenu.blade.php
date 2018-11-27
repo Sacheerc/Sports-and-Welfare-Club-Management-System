@@ -45,5 +45,19 @@
     </a>
 </div>
 <div class="menubox justify-content-center">
+    <h4>Income</h4>
+    <a href="/newIncome">
+        <div class="menubox-content">
+            <h5>New Income</h5>
+        </div>
+    </a>
+    <a href="/manageIncome">
+        <div class="menubox-content">
+            <h5>Manage Income</h5>
+        </div>
+    </a>
+</div>
+
+<div class="menubox justify-content-center">
     <h4>Home</h4>
 </div>
