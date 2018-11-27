@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="container text-light text-center col-md-8 " style="min-height: 700px">
+    <div class="container text-light text-center col-md-12 " style="min-height: 700px">
         <br>
         <table >
             <tr>
