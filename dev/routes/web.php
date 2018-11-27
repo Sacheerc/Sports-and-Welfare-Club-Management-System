@@ -66,6 +66,13 @@ Route::post('/saveloans','LoanController@store');
 Route::get('/editloans/{loan}','LoanController@edit');
 Route::patch('/updateloan/{loan}','LoanController@update');
 
+Route::get('/unicastmessage','MessageController@unicastmessage');
+Route::get('/broadcastmessage','MessageController@broadcastmessage');
+Route::post('/sendunicastmessage','MessageController@sendunicastmessage');
+Route::post('/getunicastemail','MessageController@getunicastemail');
+Route::get('/getmemberEmail','MessageController@getmemberEmail');
+Route::post('/sendbroadcastmessage','MessageController@sendbroadcastmessage');
+
 
 
 Route::get('/admin', ['middleware' => ['auth', 'Admin'], 'uses'=>'AdminController@index']);

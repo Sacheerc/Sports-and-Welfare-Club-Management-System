@@ -57,3 +57,16 @@
         </div>
     </a>
 </div>
+<div class="menubox justify-content-center">
+    <h4>Send Message</h4>
+    <a href="/getmemberEmail">
+        <div class="menubox-content">
+            <h5>Unicast Message</h5>
+        </div>
+    </a>
+    <a href="/broadcastmessage">
+        <div class="menubox-content">
+            <h5>Broadcast Message</h5>
+        </div>
+    </a>
+</div>
