@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Loan;
+use App\TotalBalance;
 use Illuminate\Http\Request;
 
 class LoanController extends Controller
@@ -46,6 +47,12 @@ class LoanController extends Controller
                 'chequenum' => $request['chequenum'],
                 'guarantor01' => $request['guarantor01'],
                 'guarantor02' => $request['guarantor02'],
+            ]);
+            $total=TotalBalance::all()->last()->total;
+            TotalBalance::create([
+                'total' => $total-15000,
+                'operationvalue' => 15000,
+                'type' => "Expense",
             ]);
             return redirect()->back();
         }
@@ -99,6 +106,12 @@ class LoanController extends Controller
         };
         $loan->save();
         $loans=$loan->all();
+        $total=TotalBalance::all()->last()->total;
+        TotalBalance::create([
+            'total' => $total+1650,
+            'operationvalue' => 1650,
+            'type' => "Expense",
+        ]);
         return view('loans.manageloans',compact('loans'));
     }
 

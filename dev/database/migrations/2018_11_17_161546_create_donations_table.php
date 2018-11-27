@@ -15,7 +15,7 @@ class CreateDonationsTable extends Migration
     {
         Schema::create('donations', function (Blueprint $table) {
             $table->primary('epfnum');
-            $table->string('epfnum');
+            $table->string('epfnum')->unique();
             $table->string('reason');
             $table->float('amount');
             $table->string('chequenum');

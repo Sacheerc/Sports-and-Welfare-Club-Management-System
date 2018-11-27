@@ -1,4 +1,13 @@
 <div class="menubox justify-content-center">
+    <h4>Total</h4>
+    <a href="/totalbalance">
+        <div class="menubox-content">
+            <h5>Total Balance</h5>
+        </div>
+    </a>
+</div>
+
+<div class="menubox justify-content-center">
     <h4>Members</h4>
     <a href="/registration">
         <div class="menubox-content">

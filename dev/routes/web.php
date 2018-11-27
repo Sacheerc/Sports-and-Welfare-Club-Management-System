@@ -31,6 +31,8 @@ Route::get('/', function () {
     return view('payment.mainindex');
 });
 
+Route::get('/totalbalance','TotalBalanceController@show');
+
 Route::get('/makedeaddonation','DonationController@index');
 Route::get('/editdeaddonation/{donation}','DonationController@edit');
 Route::patch('/updatedeaddonation/{donation}','DonationController@update');

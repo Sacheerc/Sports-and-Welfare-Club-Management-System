@@ -15,6 +15,9 @@ class CreateTotalBalancesTable extends Migration
     {
         Schema::create('total_balances', function (Blueprint $table) {
             $table->increments('id');
+            $table->float('total')->default(0);
+            $table->float('operationvalue');
+            $table->string('type');
             $table->timestamps();
         });
     }

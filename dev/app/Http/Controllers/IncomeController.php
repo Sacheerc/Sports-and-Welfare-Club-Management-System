@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\TotalBalance;
 use Illuminate\Http\Request;
 use App\Income;
 
@@ -44,7 +45,7 @@ class IncomeController extends Controller
      */
     public function store(Request $request)
     {
-
+//        dd(TotalBalance::all()->last()->total);
         $request->validate([
             'category'=>'required',
             'amount'=>'required',
@@ -59,7 +60,12 @@ class IncomeController extends Controller
         $Income->category = $request->category;
 
         $Income->save();
-
+        $total=TotalBalance::all()->last()->total;
+        TotalBalance::create([
+            'total' => $total+$request->amount,
+            'operationvalue' => $request->amount,
+            'type' => "Income",
+        ]);
         $data = Income::all();
         $message="Added Success..!";
         return view('Income.manageIncome', ['Incomes' => $data])->with('message');
@@ -108,6 +114,12 @@ class IncomeController extends Controller
      **/
     public function destroy(Income $Income)
     {
+        $total=TotalBalance::all()->last()->total;
+        TotalBalance::create([
+            'total' => $total-$Income->amount,
+            'operationvalue' => $Income->amount,
+            'type' => "Expense",
+        ]);
         $Income->delete();
         $data = Income::all();
         $message="Added Success..!";
