@@ -110,7 +110,7 @@ class LoanController extends Controller
         TotalBalance::create([
             'total' => $total+1650,
             'operationvalue' => 1650,
-            'type' => "Expense",
+            'type' => "Income",
         ]);
         return view('loans.manageloans',compact('loans'));
     }

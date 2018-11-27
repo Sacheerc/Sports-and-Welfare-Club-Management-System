@@ -47,16 +47,16 @@ class EventController extends Controller
             'thank'=>"Join with the event..Thank You!"
         );
 
-        foreach ($memberslist as $member){
-            $email=$member->email;
-
-            Mail::send(['text'=>'events.createEventEmail'], $data, function($message) use ($email) {
-                $message->to($email)->subject
-                ('Event Notice');
-                $message->from('ramadasystem@gmail.com','Ramada Hotel');
-            });
-
-        }
+//        foreach ($memberslist as $member){
+//            $email=$member->email;
+//
+//            Mail::send(['text'=>'events.createEventEmail'], $data, function($message) use ($email) {
+//                $message->to($email)->subject
+//                ('Event Notice');
+//                $message->from('ramadasystem@gmail.com','Ramada Hotel');
+//            });
+//
+//        }
         $event->creator=$request=Auth::User()->name;
 
         $event->save();
