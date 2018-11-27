@@ -19,6 +19,9 @@
                         </div>
                         <div class="col-md-7">
                             <input type="hidden" name="eventId" value="{{$event->eventId}}">
+                            <input type="hidden" name="eventName" value="{{$event->eventName}}">
+                            <input type="hidden" name="venue" value="{{$event->venue}}">
+                            <input type="hidden" name="eventDate" value="{{$event->eventDate}}">
                             <input required class="form-control" type="text" name="eventName" value="{{$event->eventName}}" placeholder="Event Name" readonly>
                         </div>
                     </div>
