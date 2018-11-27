@@ -76,6 +76,13 @@ Route::get('/getmemberEmail','MessageController@getmemberEmail');
 Route::post('/sendbroadcastmessage','MessageController@sendbroadcastmessage');
 
 
+Route::get('/newIncome','IncomeController@index');
+Route::post('/manageIncome/create','IncomeController@store')->name('Income.create');
+Route::get('/manageIncome','IncomeController@manage');
+
+Route::get('/Income/update/{Income}', ['as' => 'Income.update', 'uses' => 'IncomeController@update']);
+Route::get('/Income/remove/{Income}', ['as' => 'Income.remove', 'uses' => 'IncomeController@destroy']);
+Route::post('/manageIncome/{Income}/save','IncomeController@save')->name('Income.save');
 
 Route::get('/admin', ['middleware' => ['auth', 'Admin'], 'uses'=>'AdminController@index']);
 
