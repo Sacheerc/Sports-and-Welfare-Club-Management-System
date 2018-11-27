@@ -20,7 +20,7 @@ class CreateMembersTable extends Migration
             $table->string('lastName');
             $table->string('gender');
             $table->string('department');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('contact');
             $table->string('address');
         });

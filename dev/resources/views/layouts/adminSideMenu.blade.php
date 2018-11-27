@@ -25,9 +25,9 @@
 </div>
 <div class="menubox justify-content-center">
     <h4>Events</h4>
-    <a href="createEventForm">
+    <a href="viewEvents">
         <div class="menubox-content">
-            <h5>Events</h5>
+            <h5>View Events</h5>
         </div>
     </a>
     <a href="createEventForm">
@@ -45,6 +45,7 @@
     </a>
 </div>
 <div class="menubox justify-content-center">
+<<<<<<< HEAD
     <h4>Income</h4>
     <a href="/newIncome">
         <div class="menubox-content">
@@ -60,4 +61,30 @@
 
 <div class="menubox justify-content-center">
     <h4>Home</h4>
+=======
+    <h4>Loans</h4>
+    <a href="/offerloans">
+        <div class="menubox-content">
+            <h5>Offer Loans</h5>
+        </div>
+    </a>
+    <a href="/manageloans">
+        <div class="menubox-content">
+            <h5>Manage Loans</h5>
+        </div>
+    </a>
+</div>
+<div class="menubox justify-content-center">
+    <h4>Send Message</h4>
+    <a href="/getmemberEmail">
+        <div class="menubox-content">
+            <h5>Unicast Message</h5>
+        </div>
+    </a>
+    <a href="/broadcastmessage">
+        <div class="menubox-content">
+            <h5>Broadcast Message</h5>
+        </div>
+    </a>
+>>>>>>> 9b08f74e7f46b422e25e7ecb4a57243a32d9b4be
 </div>

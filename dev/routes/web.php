@@ -52,7 +52,27 @@ Route::post('/proceed','PaymentController@proceed');
 Route::post('/makepayment', 'PaymentController@charge');
 
 Route::get('/createEventForm','EventController@index');
+Route::get('/viewEvents','EventController@viewEvents');
 Route::post('/createEvent','EventController@create');
+Route::get('/viewEvent','EventController@viewEvent');
+Route::get('/updateEventView','EventController@updateEventView');
+Route::post('/updateEvent','EventController@updateEvent');
+Route::post('/deleteEvent','EventController@deleteEvent');
+
+Route::get('/offerloans','LoanController@index');
+Route::get('/manageloans','LoanController@show');
+Route::get('/removeloans/{loan}','LoanController@destroy');
+Route::post('/saveloans','LoanController@store');
+Route::get('/editloans/{loan}','LoanController@edit');
+Route::patch('/updateloan/{loan}','LoanController@update');
+
+Route::get('/unicastmessage','MessageController@unicastmessage');
+Route::get('/broadcastmessage','MessageController@broadcastmessage');
+Route::post('/sendunicastmessage','MessageController@sendunicastmessage');
+Route::post('/getunicastemail','MessageController@getunicastemail');
+Route::get('/getmemberEmail','MessageController@getmemberEmail');
+Route::post('/sendbroadcastmessage','MessageController@sendbroadcastmessage');
+
 
 Route::get('/newIncome','IncomeController@index');
 Route::post('/manageIncome/create','IncomeController@store')->name('Income.create');

@@ -119,8 +119,13 @@
                 <br>
 
                 <div class=' row'>
-                    <div class="col-md-8  " style="color: lawngreen">
-
+                    <div class="col-md-8">
+                        @if ($errors->any())
+                            @foreach ($errors->all() as $error)
+                                <div class="text-danger">{{$error}}</div>
+                                <br>
+                            @endforeach
+                        @endif
                     </div>
                     <div class=" col-md-2 ">
                         <button  type="submit" class="form-control btn btn-success" value="submit" name="submit">Submit</button>
