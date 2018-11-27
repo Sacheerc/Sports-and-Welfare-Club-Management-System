@@ -18,8 +18,9 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <!-- Styles -->
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
 
 </head>

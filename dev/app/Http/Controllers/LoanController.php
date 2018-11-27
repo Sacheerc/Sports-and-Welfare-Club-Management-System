@@ -74,7 +74,7 @@ class LoanController extends Controller
      */
     public function edit(Loan $loan)
     {
-        //
+        return view('loans.updateloan',compact('loan'));
     }
 
     /**
@@ -86,7 +86,8 @@ class LoanController extends Controller
      */
     public function update(Request $request, Loan $loan)
     {
-        //
+        $loan->fill($request->all())->save();
+        return redirect()->back();
     }
 
     /**
