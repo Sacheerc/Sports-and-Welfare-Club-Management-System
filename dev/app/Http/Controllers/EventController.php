@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Event;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
+use Mail;
 
 class EventController extends Controller
 {
@@ -36,7 +39,21 @@ class EventController extends Controller
         $event->creator=$request=Auth::User()->name;
 
         $event->save();
-        return redirect()->back();
+
+        $email = db::table('members')->where('eventDate','<',$today)->get();
+
+        $data = array('heading'=>"Welcome to Crime Reporting System",'fullName'=>"Full Name: ".$request->fullName,'name'=>
+            "Name with initials: ".$request->name,'nic'=>"NIC: ".$request->nic,
+            'msg'=>"Complete your Registration at $request->policeStation by showing NIC",'thank'=>"Thank You!"
+        );
+
+
+        Mail::send(['text'=>'mail'], $data, function($message) use ($em) {
+            $message->to($em)->subject
+            ('SL Police System Citizen Registration');
+            $message->from('slpolicesystem@gmail.com','SL Police');
+        });
+        return redirect("/viewEvents");
     }
 
     /**
@@ -60,6 +77,47 @@ class EventController extends Controller
     {
         //
     }
+    //Return the events
+    public function viewEvents(){
+        $dt = Carbon::now();
+        $today=$dt->toDateString();
+        $pastEvents = db::table('events')->where('eventDate','<',$today)->get();
+        $todayEvents = db::table('events')->where('eventDate','=',$today)->get();
+        $upcomingEvents = db::table('events')->where('eventDate','>',$today)->get();
+        return view('events.eventHome',compact('pastEvents','todayEvents','upcomingEvents'));
+    }
+
+    //View an event
+    public function viewEvent(Request $request){
+        $event = db::table('events')->where('eventName',$request->eventName)->First();
+        return view('events.viewEvent',compact('event'));
+    }
+    //update an Event
+
+    public function updateEventView(Request $request){
+        if($request->submit=="update"){
+
+            $event = db::table('events')->where('eventName',$request->eventName)->First();
+            return view('events.updateEvent',compact('event'));
+
+        }
+
+        else{
+            $event = db::table('events')->where('eventName',$request->eventName)->First();
+            return view('events.deleteEvent',compact('event'));
+        }
+
+    }
+
+    //deleteEvent
+
+    public function deleteEvent(Request $request){
+        $res=db::table('events')->where('eventId',$request->eventId)->delete();
+        if($res){
+            return redirect("/viewEvents");
+        }
+
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -79,9 +137,14 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updateEvent(Request $request)
     {
-        //
+        DB::table('events')
+        ->where('eventId',$request->eventId)
+        ->update(['eventName'=>$request->eventName,'eventDate'=>$request->eventDate,'venue'=>$request->venue,
+            'startTime'=>$request->startTime,'endTime'=>$request->endTime,'details'=>$request->details]);
+        return redirect("/viewEvents");
+
     }
 
     /**

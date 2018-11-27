@@ -25,9 +25,9 @@
 </div>
 <div class="menubox justify-content-center">
     <h4>Events</h4>
-    <a href="createEventForm">
+    <a href="viewEvents">
         <div class="menubox-content">
-            <h5>Events</h5>
+            <h5>View Events</h5>
         </div>
     </a>
     <a href="createEventForm">
