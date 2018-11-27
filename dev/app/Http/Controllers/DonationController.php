@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Donation;
 use App\Members;
+use App\TotalBalance;
 use Illuminate\Http\Request;
 use phpDocumentor\Reflection\Types\Null_;
 
@@ -51,12 +52,18 @@ class DonationController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'efpnum'=>'required|max:8',
+            'epfnum'=>'required|max:8|unique:donations',
             'reason'=>'required',
             'amount'=>'required',
             'chequenum'=>'required'
         ]);
         Donation::create($request->all());
+        $total=TotalBalance::all()->last()->total;
+        TotalBalance::create([
+            'total' => $total-$request->amount,
+            'operationvalue' => $request->amount,
+            'type' => "Expense",
+        ]);
         $message="Added Success..!";
 //        return redirect()->back();
         return view('ProvideDeadDonation',compact('message'));

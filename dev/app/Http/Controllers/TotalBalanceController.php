@@ -46,7 +46,8 @@ class TotalBalanceController extends Controller
      */
     public function show(TotalBalance $totalBalance)
     {
-        //
+        $balances=$totalBalance->all();
+        return view('balance.totalbalance',compact('balances'));
     }
 
     /**
