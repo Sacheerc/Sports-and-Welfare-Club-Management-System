@@ -56,7 +56,7 @@ Route::post('/proceed','PaymentController@proceed');
 Route::post('/makepayment', 'PaymentController@charge');
 
 //Routes related to event planning
-Route::get('/createEventForm','EventController@index');
+Route::get('/createEventForm','EventController@index')->middleware('auth');
 Route::get('/viewEvents','EventController@viewEvents');
 Route::post('/createEvent','EventController@create');
 Route::get('/viewEvent','EventController@viewEvent');
@@ -64,13 +64,10 @@ Route::get('/updateEventView','EventController@updateEventView');
 Route::post('/updateEvent','EventController@updateEvent');
 Route::post('/deleteEvent','EventController@deleteEvent');
 
-
-Route::get('/addExpensesFormView','ExpensesController@addExpensesFormView');
-Route::post('/addExpenses','ExpensesController@addExpenses');
-Route::get('/viewExpenses','ExpensesController@viewExpenses');
-
 //Routes related to expenses
 Route::get('/addExpensesFormView','ExpensesController@addExpensesFormView')->middleware('auth');
+Route::post('/addExpenses','ExpensesController@addExpenses');
+Route::get('/viewExpenses','ExpensesController@viewExpenses');
 
 //Routes related to loans
 Route::get('/offerloans','LoanController@index');

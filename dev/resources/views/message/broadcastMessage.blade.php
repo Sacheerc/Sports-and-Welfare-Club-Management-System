@@ -38,7 +38,7 @@ use Illuminate\Support\Facades\DB;
 
             <div class="row">
                 <div class="col-md-3 text-center">
-                    <button type="submit" class="btn btn-success" name="deadsubmit" style="width: 100px">Proceed</button>
+                    <button type="submit" class="btn btn-success" name="deadsubmit" style="width: 100px">Send</button>
                 </div>
             </div>
 
