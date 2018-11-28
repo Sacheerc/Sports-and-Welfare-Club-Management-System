@@ -94,7 +94,7 @@ td{
 #paymentform{
     position: absolute;
     z-index: 20;
-    top: 75%;
+    top: 80%;
     left: 38%;
     justify-content: center;
 }
