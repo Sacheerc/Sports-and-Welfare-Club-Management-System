@@ -61,7 +61,10 @@ Route::get('/updateEventView','EventController@updateEventView');
 Route::post('/updateEvent','EventController@updateEvent');
 Route::post('/deleteEvent','EventController@deleteEvent');
 
-Route::get('/addExpensesFormView','ExpensesController@addExpensesFormView')->middleware('auth');
+Route::get('/addExpensesFormView','ExpensesController@addExpensesFormView');
+Route::post('/addExpenses','ExpensesController@addExpenses');
+Route::get('/viewExpenses','ExpensesController@viewExpenses');
+
 
 Route::get('/offerloans','LoanController@index');
 Route::get('/manageloans','LoanController@show');

@@ -59,6 +59,11 @@
             <h5>Add Expenses</h5>
         </div>
     </a>
+    <a href="/viewExpenses">
+        <div class="menubox-content">
+            <h5>View Expenses</h5>
+        </div>
+    </a>
 </div>
 
 <div class="menubox justify-content-center">

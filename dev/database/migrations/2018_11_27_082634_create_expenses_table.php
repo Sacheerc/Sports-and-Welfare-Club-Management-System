@@ -19,8 +19,7 @@ class CreateExpensesTable extends Migration
             $table->string('description');
             $table->string('chequeNo');
             $table->integer('amount');
-            $table->date('exDate');
-            $table->time('exTime');
+            $table->dateTime('exDateTime');
             $table->timestamps();
         });
     }
