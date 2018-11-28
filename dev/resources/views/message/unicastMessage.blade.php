@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 @section('content')
     <br><br>
     <div class="form container-fluid col-md-8 col-md-offset-1 text-light border">
+        <h4 class="text-light border" style="padding: 10px;border-top-right-radius: 10px;border-top-left-radius: 10px">Unicast Message</h4>
         <form action="/sendunicastmessage" method="POST" >
             @csrf
 
@@ -44,7 +45,7 @@ use Illuminate\Support\Facades\DB;
 
             <div class="row">
                 <div class="col-md-3 text-center">
-                    <button type="submit" class="btn btn-success" style="width: 100px">Proceed</button>
+                    <button type="submit" class="btn btn-success" style="width: 100px">Send</button>
                 </div>
             </div>
 

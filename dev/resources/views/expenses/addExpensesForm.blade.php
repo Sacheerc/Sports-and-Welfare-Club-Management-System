@@ -12,7 +12,7 @@
         <div class="form container-fluid col-md-8 col-md-offset-1 text-light border" style="border-radius: 10px">
             <h4 class="text-light border" style="padding: 10px;border-top-right-radius: 10px;border-top-left-radius: 10px">Add Expense</h4>
             <br>
-            <form action="createEvent" method="POST" style="padding:20px">
+            <form action="addExpenses" method="POST" style="padding:20px">
                 @csrf
                 <div class="row">
                     <div class="col-md-3">
@@ -20,8 +20,8 @@
                     </div>
                     <div class="col-md-6">
                         <select class="form-control" name="category" >
-                            <option value="Father">Stationary</option>
-                            <option value="Mother">Outdoor</option>
+                            <option value="Stationary">Stationary</option>
+                            <option value="Outdoor">Outdoor</option>
                         </select>
                     </div>
                 </div>
@@ -52,17 +52,6 @@
                         <input required class="form-control" type="number" name="amount" placeholder="Amount">
                     </div>
                 </div>
-
-                <br>
-                <div class="row">
-                    <div class="col-md-3">
-                        End Time
-                    </div>
-                    <div class="col-md-7">
-                        <input required class="form-control" type="time" name="endTime" >
-                    </div>
-                </div>
-                <br>
 
                 <br>
                 <div class=' row'>

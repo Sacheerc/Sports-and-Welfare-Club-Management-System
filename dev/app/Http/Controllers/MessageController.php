@@ -49,7 +49,7 @@ class MessageController extends Controller
         $subject=$request->subject;
         $data=array('msg'=>"Message : ".$request->message,'email'=>$email,'subject'=>$subject);
 
-        Mail::send('message.unicastmm', $data, function($message) use($data){
+        Mail::send('message.sendEmail', $data, function($message) use($data){
             $message->to($data['email'])->subject($data['subject']);
             $message->from('ramadasystem@gmail.com','Ramada Hotel');
         });
@@ -72,9 +72,25 @@ class MessageController extends Controller
     }
 
     //send broadcast message
-    public function sendbroadcastmessage()
+    public function sendbroadcastmessage(Request $request)
     {
+        $memberslist = db::table('members')->get();
 
+        $subject=$request->subject;
+
+        foreach ($memberslist as $member){
+            $email=$member->email;
+
+            $data=array('msg'=>"Message : ".$request->message,'email'=>$email,'subject'=>$subject);
+
+            Mail::send('message.sendEmail', $data, function($message) use($data){
+                $message->to($data['email'])->subject($data['subject']);
+                $message->from('ramadasystem@gmail.com','Ramada Hotel');
+            });
+
+        }
+
+        return view('message.getMemberEmail');
     }
 
     /**
